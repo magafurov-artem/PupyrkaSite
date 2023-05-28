@@ -1,8 +1,49 @@
 {% extends 'main/template.html' %}
 
-{% block title %}Главная{% endblock %}
+{% block title %}Пупырка{% endblock %}
 
 {% block body %}
-    <h1 style="color: white;">Колледж Пупырка</h1>
-    <h2 style="color: white;">Главная страница</h2>
+  <main>
+    <section class="promo">
+      <div class="promo__item promo__item_big">
+        <img src="https://t.ly/ENVZR" alt="hot">
+        <div class="promo__text">
+          <h2>Рейтинг топ-30 колледжей</h2>
+          <p>Пупырка входит в топ-30 колледжей российской федерации с 2008 года</p>
+          <a href="#">Узнать подробнее</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tests">
+      <h2>Наши специальности</h2>
+      <div class="tests__list">
+        <div class="tests__item">
+          <img src="https://t.ly/ENVZR" alt="test 1">
+          <h3>WEB-программирование</h3>
+          <p>-</p>
+          <a href="#">Узнать подробности</a>
+        </div>
+        <div class="tests__item">
+          <img src="https://t.ly/ENVZR" alt="test 2">
+          <h3>Компьютерная инженерия</h3>
+          <p>-</p>
+          <a href="#">Узнать подробности</a>
+        </div>
+        <div class="tests__item">
+          <img src="https://t.ly/ENVZR" alt="test 3">
+          <h3>Фотограф</h3>
+          <p>-</p>
+          <a href="#">Узнать подробности</a>
+        </div>
+        <div class="tests__item">
+          <img src="https://t.ly/ENVZR" alt="test 3">
+          <h3>null</h3>
+          <p>-</p>
+          <a href="#">Узнать подробности</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
 {% endblock %}

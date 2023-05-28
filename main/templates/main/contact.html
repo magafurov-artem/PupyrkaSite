@@ -1,0 +1,24 @@
+{% extends 'main/template.html' %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block body %}
+    <section class="contacts">
+      <h2>Контакты</h2>
+      <div class="contacts__list">
+        <div class="contacts__item">
+          <h3>Наш адрес</h3>
+          <p>г. Сызрань, ул. Интернациональная, д. 12</p>
+        </div>
+        <div class="contacts__item">
+          <h3>Наш телефон</h3>
+          <p>+7 (464) 674-28-01</p>
+        </div>
+        <div class="contacts__item">
+          <h3>Наш email</h3>
+          <p>for_requests@pupirka.ru</p>
+          <a href="mailto:for_requests@pupirka.ru">Написать нам на электронную почту.</a>
+        </div>
+      </div>
+    </section>
+{% endblock %}

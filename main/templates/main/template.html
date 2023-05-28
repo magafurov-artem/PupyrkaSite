@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
@@ -10,6 +10,23 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    {% block body %}{% endblock %}
+<header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Главная</a></li>
+        <li><a href="{% url 'about' %}">О нас</a></li>
+        <li><a href="{% url 'applicants' %}">Абитуриентам</a></li>
+        <li><a href="{% url 'students' %}">Студентам</a></li>
+        <li><a href="{% url 'contact' %}">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="https://t.ly/ENVZR" alt="logo">
+    </div>
+  </header>
+{% block body %}{% endblock %}
+  <footer>
+    <p>© 2023 Pupirka</p>
+  </footer>
 </body>
 </html>
