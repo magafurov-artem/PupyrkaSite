@@ -1,6 +1,6 @@
 {% extends 'main/template.html' %}
 
-{% block title %}Пупырка{% endblock %}
+{% block title %}Главная{% endblock %}
 
 {% block body %}
   <main>
@@ -18,30 +18,14 @@
     <section class="tests">
       <h2>Наши специальности</h2>
       <div class="tests__list">
-        <div class="tests__item">
-          <img src="https://t.ly/ENVZR" alt="test 1">
-          <h3>WEB-программирование</h3>
-          <p>-</p>
-          <a href="#">Узнать подробности</a>
-        </div>
-        <div class="tests__item">
-          <img src="https://t.ly/ENVZR" alt="test 2">
-          <h3>Компьютерная инженерия</h3>
-          <p>-</p>
-          <a href="#">Узнать подробности</a>
-        </div>
-        <div class="tests__item">
-          <img src="https://t.ly/ENVZR" alt="test 3">
-          <h3>Фотограф</h3>
-          <p>-</p>
-          <a href="#">Узнать подробности</a>
-        </div>
-        <div class="tests__item">
-          <img src="https://t.ly/ENVZR" alt="test 3">
-          <h3>null</h3>
-          <p>-</p>
-          <a href="#">Узнать подробности</a>
-        </div>
+        {% for speciality in specialties %}
+          <div class="tests__item">
+            <img src="{{ speciality.image_preview_url }}" alt="test 1">
+            <h3>{{ speciality.title }}</h3>
+            <p>{{ speciality.about }}</p>
+            <a href="#">Узнать подробности</a>
+          </div>
+        {% endfor %}
       </div>
     </section>
   </main>

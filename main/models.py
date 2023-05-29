@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class Specialties(models.Model):
+    title = models.CharField(max_length=255)
+    about = models.TextField()
+    image_preview_url = models.CharField(max_length=255)
