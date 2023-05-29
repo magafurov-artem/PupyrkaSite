@@ -1,7 +1,6 @@
 from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render
 from .models import Specialties
-# Create your views here.
 
 
 def index(request: WSGIRequest):
@@ -23,3 +22,7 @@ def applicants(request: WSGIRequest):
 
 def students(request: WSGIRequest):
     return render(request, 'main/students.html')
+
+
+def admissions(request: WSGIRequest):
+    return render(request, 'main/admissions.html')

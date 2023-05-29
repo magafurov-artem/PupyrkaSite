@@ -20,10 +20,10 @@
       <div class="tests__list">
         {% for speciality in specialties %}
           <div class="tests__item">
-            <img src="{{ speciality.image_preview_url }}" alt="test 1">
+            <img src="{{ speciality.image_preview_url }}" alt={{ speciality.id }}>
             <h3>{{ speciality.title }}</h3>
             <p>{{ speciality.about }}</p>
-            <a href="#">Узнать подробности</a>
+            <a href={% url 'admissions' %}>Подать заявку</a>
           </div>
         {% endfor %}
       </div>
