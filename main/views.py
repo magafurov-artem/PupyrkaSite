@@ -1,6 +1,8 @@
 from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render
 from .models import Specialties
+from .forms import SendAdmissions
+from loguru import logger
 
 
 def index(request: WSGIRequest):
@@ -25,4 +27,15 @@ def students(request: WSGIRequest):
 
 
 def admissions(request: WSGIRequest):
-    return render(request, 'main/admissions.html')
+    if request.method == 'POST':
+        form = SendAdmissions(request.POST)
+        logger.debug(form.is_valid())
+        print(form.cleaned_data)
+        # if form.is_valid():
+        #     temp = form.save(commit=False)
+        #     admissions.speciality_id = form.cleaned_data['speciality']
+        #     print(temp.cleaned_data)
+        form.save()
+    else:
+        form = SendAdmissions()
+    return render(request, 'main/admissions.html', {'form': form})

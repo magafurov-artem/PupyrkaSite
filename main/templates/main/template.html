@@ -8,6 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="{% static 'main/image/favicon.png' %}">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    {% block header_tag %}{% endblock %}
     <title>Пупырка - {% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
       <img src="https://t.ly/ENVZR" alt="logo">
     </div>
   </header>
-{% block body %}{% endblock %}
+  {% block body %}{% endblock %}
   <footer>
     <p>© 2023 Колледж Пупырка</p>
   </footer>
